@@ -2,11 +2,11 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Welcome</title>
 </head>
 <body>
     <h1>Welcome</h1>
-    <h2 th:text=$"{firstname}">Fname</h2>
-    <h2 th:text=$"{lastname}">Lname</h2>
+    <h2 th:text="${user.fname}">First Name</h2>
+    <h2 th:text="${user.lname}">Last Name</h2>
 </body>
 </html>
