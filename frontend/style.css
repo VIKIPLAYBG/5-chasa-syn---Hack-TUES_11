@@ -34,7 +34,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 175px;
+  top: 150px;
   left: 175px;
 }
 
@@ -45,7 +45,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 250px;
+  top: 225px;
   left: 175px;
 }
 
@@ -56,7 +56,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 325px;
+  top: 300px;
   left: 175px;
 }
 
@@ -67,7 +67,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 400px;
+  top: 375px;
   left: 175px;
 }
 
@@ -88,7 +88,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 177px;
+  top: 150px;
   left: 775px;
 }
 
@@ -99,7 +99,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 250px;
+  top: 225px;
   left: 775px;
 }
 
@@ -110,7 +110,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 325px;
+  top: 300px;
   left: 775px;
 }
 
@@ -121,7 +121,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 175px;
+  top: 210px;
   left: 475px;
 }
 
@@ -132,20 +132,20 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 250px;
+  top: 285px;
   left: 475px;
 }
 
 .remember-forgot {
   position: absolute;
-  top: 320px;
+  top: 360px;
   left: 490px;
 }
   
 .reg_button {
   position: absolute;
   background-color: black;
-  border: none;
+  border: 2px solid transparent;
   color: white;
   padding: 25px 60px;
   text-align: center;
@@ -154,31 +154,47 @@ body{
   font-size: 16px;
   top: 450px;
   left: 560px;
+  border-radius: 15px;
+  transition: 0.3s ease, color 0.3s ease;
+}
+
+.reg_button:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
 }
 
 .login_button {
   position: absolute;
   background-color: black;
-  border: none;
+  border: 2px solid transparent;
   color: white;
   padding: 25px 70px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 360px;
+  top: 400px;
   left: 560px;
+  border-radius: 15px;
+  transition: 0.3s ease, color 0.3s ease;
+}
+
+.login_button:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
 }
 
 .reg_login {
   position: absolute;
-  top: 450px;
+  top: 485px;
   left: 520px;
 }
 
 .login_reg {
   position: absolute;
-  top: 530px;
+  top: 535px;
   left: 525px;
 }
 
