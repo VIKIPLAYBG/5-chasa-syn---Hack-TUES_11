@@ -6,35 +6,43 @@
 </head>
 
 <body>
-  <div class = "wrapper">
-    <form action ="">
-    <h1 class = "reg_title">Register</h1>
+  <div class="wrapper">
+    <form id="registerForm">
+      <h1 class="reg_title">Register</h1>
+      <input type="text" id="regFirstName" class="reg_fname" placeholder="First Name" required>
+      <input type="text" id="regLastName" class="reg_lname" placeholder="Last Name" required>
+      <input type="text" id="regBirthDate" class="reg_birthdate" placeholder="Date of Birth" required>
+      <input type="text" id="regSex" class="reg_sex" placeholder="Sex" required>
+      <input type="text" id="regEmail" class="reg_user" placeholder="Email" required>
+      <input type="password" id="regPassword" class="reg_pass" placeholder="Password" required>
+      <input type="password" id="regConfirmPassword" class="reg_confirm_pass" placeholder="Confirm Password" required>
+      <button type="button" class="reg_button" onclick="validateRegisterForm()">Register</button>
+      <div class="register-link"></div>
+      <p class="login_reg">Already have an account? <a href="login.html">Login</a></p>
+      <script src="script.js"></script>
+    </form>
   </div>
-  <div class = "reg_fname">
-    <input type ="text" class = "reg_fname" placeholder = "First Name" required>
-  </div>
-  <div class = "reg_lname">
-    <input type = "text" class = "reg_lname" placeholder = "Last Name" required>
-  </div>
-  <div class = "reg_birthdate">
-    <input type = "text" class = "reg_birthdate" placeholder = "Date of Birth" required>
-  </div>
-  <div class = "reg_sex">
-    <input type = "text" class = "reg_sex" placeholder = "Sex" required>
-  </div>
-  <div class = "reg_log_user">
-    <input type= "text" class = "reg_user" placeholder = "Email" required>
-  </div>
-  <div class = "pass-input">
-    <input type = "password" class = "reg_pass" placeholder = "Password" required>
-  </div>
-  <div class = "confirm-pass">
-    <input type = "password" class = reg_confirm_pass placeholder = "Confirm Password" required>
-  </div>
-  <button type = "submit" class = "reg_button" onclick="window.location.href='complaints.html'">Register</button>
-  <div class = "register-link"></div>
-  <p class = "login_reg">Already have an account? <a href = "login.html">Login</a></p>
-  <script src= "script.js"></script>
-  </form>
+
+  <script>
+    function validateRegisterForm() {
+      var firstName = document.getElementById("regFirstName").value;
+      var lastName = document.getElementById("regLastName").value;
+      var birthDate = document.getElementById("regBirthDate").value;
+      var sex = document.getElementById("regSex").value;
+      var email = document.getElementById("regEmail").value;
+      var password = document.getElementById("regPassword").value;
+      var confirmPassword = document.getElementById("regConfirmPassword").value;
+
+      if (firstName && lastName && birthDate && sex && email && password && confirmPassword) {
+        if (password === confirmPassword) {
+          window.location.href = 'complaints.html';
+        } else {
+          alert("Passwords do not match. Please check again.");
+        }
+      } else {
+        alert("Please fill in all the required fields.");
+      }
+    }
+  </script>
 </body>
 </html>
