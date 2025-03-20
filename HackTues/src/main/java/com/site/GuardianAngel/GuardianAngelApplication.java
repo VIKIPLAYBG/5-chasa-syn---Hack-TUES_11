@@ -1,13 +1,13 @@
-package com.site.HackTues;
+package com.site.GuardianAngel;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HackTuesApplication {
+public class GuardianAngelApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HackTuesApplication.class, args);
+		SpringApplication.run(GuardianAngelApplication.class, args);
 	}
 
 }
