@@ -50,6 +50,17 @@
   left: 85px;
 }
 
+.reg_sex {
+  position: absolute;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 200px;
+  left: 85px;
+}
+
 .login_title {
   position: absolute;
   text-align: center;
@@ -109,7 +120,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 400px;
+  top: 450px;
   left: 560px;
 }
 
@@ -135,7 +146,7 @@
 
 .login_reg {
   position: absolute;
-  top: 485px;
+  top: 530px;
   left: 525px;
 }
 
