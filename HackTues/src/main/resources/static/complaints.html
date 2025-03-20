@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychologist support</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: 'Arial', 'sans-seri';
+        }
+        body{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+            text-align:center;
+            background:lynear-gradient(135deg, #a8edea, #fed6e3);
+            padding:20px;
+        }
+        .container{
+            max-width: 700px;
+            background: #fff;
+            padding:40px;
+            border-radius: 12px;
+            box-shadow:0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .container:hover{
+            transition:scale(1.03);
+        }
+        h1{
+            font-size:26px;
+            color:#2c3e50;
+            margin-bottom:10px;
+        }
+        p{
+            font-size:16px;
+            color:#666;
+            margin-bottom:26px;
+        }
+        .comment-section{
+           margin-top:30px;
+           text-align:left;
+        }
+        .comment{
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            color: #2c3e50;
+            font-size: 14px;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .comment:hover{
+            transform:scale(1.02);
+        }
+        .comment:before{
+            content:"";
+            font-size:40px;
+            color:#3498db;
+            position:absolute;
+            left:10px;
+            top:-10px;
+        }
+        .comment p {
+            margin-left: 20px;
+            font-style: italic;
+        }
+        .comment strong{
+            display:block;
+            margin-top: 10px;
+            color:#2980b9;
+            font-size: 12px;
+            text-align:right;
+        }
+        .add-comment {
+            margin-top: 20px;
+            text-align:center;
+        }
+        textarea{
+            width:100%;
+            padding:10px;
+            border: 2px solid #3498db;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-bottom:12px;
+            resize:none;
+        }
+        button{
+            background:#3498db;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius: 6px;
+            cursor:pointer;
+            font-size: 14px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        button:hover{
+            background:#2980b9;
+            transform:scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <h1>Psychologyc support</h1>
+        <p>Share your problem.</p>
+        <div class="comment-section" id="commentSection">
+            <h2>What the patients tell:</h2>
+    </div>
+
+    <div class = "comment">
+        <p>I have schizophrenia.</p>
+        <strong>Anonymous user</strong>
+    </div>
+
+    <div class = "comment">
+        <p>I am mentally unstable.</p>
+        <strong>Anonymous user</strong>
+    </div>
+
+    <div class = "add-comment">
+        <h2>Share your problem:</h2>
+            <textarea id="userComment" rows="4" placeholder="Describe your problem."></textarea>
+            <button onclick="addComment()">Add a comment.</button>
+    </div>
+
+    <script>
+        function addComment() {
+            let commentText = document.getElementById("userComment").value;
+            if (commentText.trim() === "") {
+                alert("Please, add comment.");
+                return;
+            }
+
+            let commentSection = document.getElementById("commentSection");
+            let newComment = document.createElement("div");
+            newComment.classList.add("comment");
+            newComment.innerHTML = `<p>${commentText}</p><strong>- Anonymous user</strong>`;
+            commentSection.appendChild(newComment);
+            document.getElementById("userComment").value = "";
+        }
+    </script>
+    
+</body>
+</html>

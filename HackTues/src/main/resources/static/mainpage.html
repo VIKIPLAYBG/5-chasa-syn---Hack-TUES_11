@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychologyst Support</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:"Arial", "sans-serif"
+        }
+        body{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            text-align:center;
+            background:linear-gradient(135deg, #a8edea, #fed6e3);
+        }
+        .container{
+            max-width: 650px;
+            background:#fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .container-hover{
+            transform:scale(1.03);
+        }
+        h1{
+            font-size:26px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size:16px;
+            color:#666;
+            margin:20px;
+        }
+        .buttons{
+            display:flex;
+            justify-content:center;
+            gap:15px;
+        }
+        button{
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background: #2980b9;
+            transform: scale(1.1);
+        }
+
+        .logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: rotate(5deg) scale(1.1);
+        }
+            .info-box {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            color: #2c3e50;
+            font-size: 14px;
+            text-align: left
+        }
+        .info-box strong{
+            color:#3498db;
+        }
+
+  </style>
+</head>
+<body>
+    
+    <div class="container">
+        <img src="https://via.placeholder.com/90" alt="Logo" class="logo">
+        <h1>Psychologist Support</h1>
+        <p>We connect professional psychologists with people, who search support.</p>
+        <div class="buttons">
+            <button onclick="window.location.href='register-psychologist.html'">Registration for psychologists</button>
+            <button onclick="window.location.href='request-help.html'">Request for help</button>
+        </div>
+        
+        <div class="info-box">
+            <p><strong>How it works?</strong></p>
+            <p>✔ The psychologists registrate and receive requsts from mentally unstable individuals.</p>
+            <p>✔The patients submit anonymous info about their mental problem.</p>
+            <p>✔ The system automatically connect patient with psychologist..</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
