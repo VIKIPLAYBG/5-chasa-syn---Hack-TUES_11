@@ -17,6 +17,39 @@
   left: 520px;
 }
 
+.reg_fname {
+  position: absolute;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 89px;
+  left: 85px;
+}
+
+.reg_lname {
+  position: absolute;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 126px;
+  left: 85px;
+}
+
+.reg_birthdate {
+  position: absolute;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 163px;
+  left: 85px;
+}
+
 .login_title {
   position: absolute;
   text-align: center;
@@ -34,8 +67,8 @@
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 175px;
-  left: 475px;
+  top: 89px;
+  left: 387.5px;
 }
 
 .reg_log_pass {
@@ -46,7 +79,7 @@
   display: inline-block;
   font-size: 16px;
   top: 250px;
-  left: 475px;
+  left: 775px;
 }
 
 .reg_confirm_pass {
@@ -57,7 +90,7 @@
   display: inline-block;
   font-size: 16px;
   top: 325px;
-  left: 475px;
+  left: 775px;
 }
 
 .remember-forgot {
