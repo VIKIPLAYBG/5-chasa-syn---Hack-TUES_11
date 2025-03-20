@@ -136,6 +136,39 @@ body{
   left: 475px;
 }
 
+.login_google {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: #fed6e3;
+  padding: 10px 10px;
+  top: 140px;
+  left: 540px;
+  border-radius: 50px;
+}
+
+.login_fb {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: #fed6e3;
+  padding: 10px 10px;
+  top: 140px;
+  left: 630px;
+  border-radius: 50px;
+}
+
+.login_x {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  background-color: #fed6e3;
+  padding: 8px 10px;
+  top: 140px;
+  left: 720px;
+  border-radius: 50px;
+}
+
 .remember-forgot {
   position: absolute;
   top: 360px;
