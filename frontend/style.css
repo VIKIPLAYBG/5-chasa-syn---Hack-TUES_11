@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  text-align:center;
+  background:linear-gradient(135deg, #a8edea, #fed6e3);
+}
+
+.reg_title {
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 64px;
+  top: 50px;
+  left: 520px;
+}
+
+.reg_fname {
+  position: absolute;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 175px;
+  left: 175px;
+}
+
+.reg_lname {
+  position: absolute;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 250px;
+  left: 175px;
+}
+
+.reg_birthdate {
+  position: absolute;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 325px;
+  left: 175px;
+}
+
+.reg_sex {
+  position: absolute;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 400px;
+  left: 175px;
+}
+
+.login_title {
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 64px;
+  top: 50px;
+  left: 565px;
+}
+
+.reg_user {
+  position: absolute;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 177px;
+  left: 775px;
+}
+
+.reg_pass {
+  position: absolute;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 250px;
+  left: 775px;
+}
+
+.reg_confirm_pass {
+  position: absolute;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 325px;
+  left: 775px;
+}
+
+.login_user {
+  position: absolute;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 175px;
+  left: 475px;
+}
+
+.login_pass {
+  position: absolute;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 250px;
+  left: 475px;
+}
+
+.remember-forgot {
+  position: absolute;
+  top: 320px;
+  left: 490px;
+}
+  
+.reg_button {
+  position: absolute;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 25px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 450px;
+  left: 560px;
+}
+
+.login_button {
+  position: absolute;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 25px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 360px;
+  left: 560px;
+}
+
+.reg_login {
+  position: absolute;
+  top: 450px;
+  left: 520px;
+}
+
+.login_reg {
+  position: absolute;
+  top: 530px;
+  left: 525px;
+}
+
+.reset_pass {
+  position: absolute;
+  font-size: 64px;
+  top: 75px;
+  left: 420px;
+}
+
+.send_code {
+  position: absolute;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 75px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  top: 200px;
+  left: 555px;
+}
