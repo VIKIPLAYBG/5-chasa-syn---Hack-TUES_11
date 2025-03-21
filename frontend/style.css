@@ -14,7 +14,7 @@ body {
   align-items:center;
   height:100vh;
   text-align:center;
-  background:linear-gradient(135deg, #a8edea, #fed6e3);
+  background:linear-gradient(#B5EAD7, #77DD77);
 }
 
 .go_back {
@@ -226,7 +226,7 @@ body {
   position: absolute;
   align-items: center;
   justify-content: center;
-  background-color: #fed6e3;
+  background-color: #B5EAD7, #77DD77;
   padding: 10px 10px;
   top: 140px;
   left: 630px;
@@ -237,7 +237,7 @@ body {
   position: absolute;
   align-items: center;
   justify-content: center;
-  background-color: #fed6e3;
+  background-color:#B5EAD7, #77DD77;
   padding: 8px 10px;
   top: 140px;
   left: 720px;
@@ -252,7 +252,7 @@ body {
   
 .reg_button {
   position: absolute;
-  background-color: #f5cde2;
+  background-color: #B5EAD7, #77DD77;
   border: 1px solid transparent;
   color: black;
   padding: 25px 60px;
@@ -288,7 +288,7 @@ body {
 }
 
 .login_button:hover {
-  background-color: #a8edea;
+  background-color: #B5EAD7, #77DD77;
   color: black;
 }
 
@@ -315,7 +315,7 @@ body {
   position: absolute;
   background-color: black;
   border: none;
-  color: white;
+  color:#B5EAD7, #77DD77;
   padding: 15px 75px;
   text-align: center;
   text-decoration: none;

@@ -23,7 +23,6 @@
       <button type = "button" class = "reg_button" onclick="validateRegisterForm()">Register</button>
       <div class = "register-link"></div>
       <p class = "login_reg">Already have an account? <a href = "login.html">Login</a></p>
-      <script src="script.js"></script>
     </form>
   </div>
 
@@ -38,7 +37,11 @@
 
       if (firstName && lastName && birthDate && email && password && confirmPassword) {
         if (password === confirmPassword) {
-          window.location.href = 'complaints.html';
+          // Запазване на име в localStorage
+          localStorage.setItem("psychologistName", firstName + " " + lastName);
+          
+          // Пренасочване към psychologist.html
+          window.location.href = 'psychologist.html';
         } else {
           alert("Passwords do not match. Please check again.");
         }
@@ -47,5 +50,6 @@
       }
     }
   </script>
+
 </body>
 </html>
