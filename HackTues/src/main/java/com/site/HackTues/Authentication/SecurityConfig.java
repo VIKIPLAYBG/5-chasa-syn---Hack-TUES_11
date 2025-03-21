@@ -1,4 +1,4 @@
-package com.site.HackTues;
+package com.site.HackTues.Authentication;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

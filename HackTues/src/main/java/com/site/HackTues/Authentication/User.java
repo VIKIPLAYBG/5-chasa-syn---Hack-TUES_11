@@ -1,4 +1,4 @@
-package com.site.HackTues;
+package com.site.HackTues.Authentication;
 
 import jakarta.persistence.*;
 

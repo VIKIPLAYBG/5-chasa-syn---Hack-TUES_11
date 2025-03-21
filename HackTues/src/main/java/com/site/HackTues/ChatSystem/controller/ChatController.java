@@ -1,4 +1,4 @@
-package com.example.tutorial.controller;
+package com.site.HackTues.ChatSystem.controller;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;

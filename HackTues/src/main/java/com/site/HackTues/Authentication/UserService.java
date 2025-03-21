@@ -1,4 +1,4 @@
-package com.site.HackTues;
+package com.site.HackTues.Authentication;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

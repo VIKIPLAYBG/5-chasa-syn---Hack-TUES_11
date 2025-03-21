@@ -1,5 +1,4 @@
-
-package com.example.tutorial.model;
+package com.site.HackTues.ChatSystem.model;
 
 public class ChatMessage {
     private String content;

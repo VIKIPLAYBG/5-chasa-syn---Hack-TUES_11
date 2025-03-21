@@ -1,4 +1,4 @@
-package com.site.HackTues;
+package com.site.HackTues.Authentication;
 
 import jakarta.servlet.http.HttpSession;
 import org.springframework.security.crypto.password.PasswordEncoder;
