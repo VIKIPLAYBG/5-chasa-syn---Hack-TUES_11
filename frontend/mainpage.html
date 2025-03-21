@@ -3,50 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psychologyst Support</title>
+    <title>Psychologist Support</title>
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:"Arial", "sans-serif"
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Arial", "sans-serif";
         }
-        body{
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            text-align:center;
-            background:linear-gradient(135deg, #a8edea, #fed6e3);
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
         }
-        .container{
-            max-width: 650px;
-           background:#fff;
+        .container {
+            max-width: 700px;
+            background: #fff;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease-in-out;
         }
-        .container-hover{
-            transform:scale(1.03);
-        }
-        h1{
-            font-size:26px;
+        h1 {
+            font-size: 26px;
             color: #2c3e50;
             margin-bottom: 10px;
         }
-        p{
-            font-size:16px;
-            color:#666;
-            margin:20px;
+        p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
         }
-        .buttons{
-            display:flex;
-            justify-content:center;
-            gap:15px;
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
         }
-        button{
+        button {
             background: #3498db;
             color: white;
             border: none;
@@ -60,54 +57,119 @@
             background: #2980b9;
             transform: scale(1.1);
         }
-
-        .logo {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 15px;
-            border: 3px solid #3498db;
-            transition: transform 0.3s ease;
+        .hidden {
+            display: none;
         }
-
-        .logo:hover {
-            transform: rotate(5deg) scale(1.1);
+        .comment-section, .add-comment {
+            margin-top: 30px;
+            text-align: left;
         }
-            .info-box {
+        .comment {
             background: #ecf0f1;
             padding: 15px;
             border-radius: 8px;
-            margin-top: 20px;
+            margin-top: 10px;
             color: #2c3e50;
             font-size: 14px;
-            text-align: left
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
-        .info-box strong{
-            color:#3498db;
+        .comment:hover {
+            transform: scale(1.02);
         }
-        
-
-  </style>
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #3498db;
+            border-radius: 6px;
+            font-size: 14px;
+            margin-bottom: 12px;
+            resize: none;
+        }
+    </style>
 </head>
 <body>
-    
-    <div class="container">
-        <img src="logo.jpg" alt="Logo" class="logo">
+
+    <div class="container" id="mainContainer">
         <h1>Psychologist Support</h1>
-        <p>We connect professional psychologists with people, who search support.</p>
+        <p>We connect professional psychologists with people who seek support.</p>
         <div class="buttons">
-            <button onclick="window.location.href='login.html'">Register as a Psychologist</button>
-            <button onclick="window.location.href='login.html'">Request for help</button>
-        </div>
-        
-        <div class="info-box">
-            <p><strong>How it works?</strong></p>
-            <p>✔ The psychologists registrate and receive requsts from mentally unstable individuals.</p>
-            <p>✔The patients submit anonymous info about their mental problem.</p>
-            <p>✔ The system automatically connect patient with psychologist..</p>
+            <button onclick="showPsychologistView()">Register as a Psychologist</button>
+            <button onclick="showPatientView()">Request for Help</button>
         </div>
     </div>
+
+    <div class="container hidden" id="psychologistView">
+        <h1>Psychologist Dashboard</h1>
+        <p>Here you can see patient complaints and respond.</p>
+        <div class="comment-section" id="complaints">
+            <h2>What the patients tell:</h2>
+            <div class="comment">
+                <p>I have schizophrenia.</p>
+                <strong>Anonymous user</strong>
+                <textarea placeholder="Leave a comment..." class="response-box"></textarea>
+                <button onclick="addResponse(this)">Reply</button>
+            </div>
+            <div class="comment">
+                <p>I am mentally unstable.</p>
+                <strong>Anonymous user</strong>
+                <textarea placeholder="Leave a comment..." class="response-box"></textarea>
+                <button onclick="addResponse(this)">Reply</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container hidden" id="patientView">
+        <h1>Share your problem</h1>
+        <div class="add-comment">
+            <textarea id="userComplaint" rows="4" placeholder="Describe your problem..."></textarea>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function showPsychologistView() {
+            document.getElementById("mainContainer").classList.add("hidden");
+            document.getElementById("psychologistView").classList.remove("hidden");
+            document.getElementById("patientView").classList.add("hidden");
+        }
+
+        function showPatientView() {
+            document.getElementById("mainContainer").classList.add("hidden");
+            document.getElementById("psychologistView").classList.add("hidden");
+            document.getElementById("patientView").classList.remove("hidden");
+        }
+
+        function submitComplaint() {
+            let complaintText = document.getElementById("userComplaint").value;
+            if (complaintText.trim() === "") {
+                alert("Please enter your complaint.");
+                return;
+            }
+            let complaintsSection = document.getElementById("complaints");
+            let newComplaint = document.createElement("div");
+            newComplaint.classList.add("comment");
+            newComplaint.innerHTML = `<p>${complaintText}</p><strong>Anonymous user</strong>
+                <textarea placeholder="Leave a comment..." class="response-box"></textarea>
+                <button onclick="addResponse(this)">Reply</button>`;
+            complaintsSection.appendChild(newComplaint);
+            document.getElementById("userComplaint").value = "";
+            alert("Your complaint has been submitted.");
+        }
+
+        function addResponse(button) {
+            let responseBox = button.previousElementSibling;
+            if (responseBox.value.trim() === "") {
+                alert("Please enter a response.");
+                return;
+            }
+            let response = document.createElement("p");
+            response.innerHTML = `<strong>Psychologist:</strong> ${responseBox.value}`;
+            button.parentElement.appendChild(response);
+            responseBox.value = "";
+        }
+    </script>
 
 </body>
 </html>
