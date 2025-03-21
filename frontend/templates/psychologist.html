@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psychologist Dashboard</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="../static/styles/style.css" rel="stylesheet" type="text/css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -60,23 +60,23 @@
             border-radius: 5px;
         }
         .logout-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: #3ca8e7;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: #3ca8e7;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s ease, transform 0.2s ease;
+        }
 
-.logout-button:hover {
-    background: #2ba0c0;
-    transform: scale(1.05);
-}
+        .logout-button:hover {
+            background: #2ba0c0;
+            transform: scale(1.05);
+        }
 
     </style>
 </head>
@@ -104,49 +104,7 @@
     </div>
 </div>
 
-<script>
-    function logout() {
-        localStorage.clear(); 
-        alert("You have been logged out!");
-        window.location.href = "index.html"; 
-    }
-</script>
-
-
-<script>
-    function addResponse(button) {
-        var complaintDiv = button.parentElement;
-        var textArea = complaintDiv.querySelector(".response-box");
-        var responseText = textArea.value.trim();
-
-        var profanities = ["damn", "hell", "crap", "fuck", "shit", "you idiot", "you suck", "sucker", "kys", "kill yourself"];
-
-        function checkForProfanity(text) {
-            for (var i = 0; i < profanities.length; i++) {
-                var regex = new RegExp("\\b" + profanities[i] + "\\b", "gi");
-                if (regex.test(text)) {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        if (checkForProfanity(responseText)) {
-            alert("Warning: Your response contains inappropriate language. Please consider revising it.");
-        } else {
-            if (responseText) {
-                var responseDiv = document.createElement("div");
-                responseDiv.classList.add("response");
-                responseDiv.innerHTML = "<strong>You:</strong> " + responseText;
-
-                complaintDiv.querySelector(".responses").appendChild(responseDiv);
-                textArea.value = ""; 
-            } else {
-                alert("Please write a response before submitting.");
-            }
-        }
-    }
-</script>
+<script src="../static/scripts/script.js"></script>
 
 </body>
 </html>

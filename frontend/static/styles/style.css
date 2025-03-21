@@ -46,7 +46,7 @@ body {
 }
 
 .go_back:hover img {
-  content: url('go_back_black.png');
+  content: url('../../images/go_back_black.png');
 }
 
 .reg_title {

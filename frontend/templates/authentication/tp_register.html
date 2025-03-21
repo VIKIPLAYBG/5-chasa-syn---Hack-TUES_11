@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+    <title>Register as Supporter</title>
+    <link href="../../static/styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <form id="registerForm">
+      <h1 class="reg_title">Register as Supporter</h1>
+      <div class = "go_back">
+        <a href = "../choose_role.html">
+          <img src = "../../images/go_back_white.png" alt = "Go back">
+        </a>
+      </div>
+      <input type = "text" id = "regFirstName" class = "reg_fname" placeholder = "First Name" required>
+      <input type = "text" id = "regLastName" class = "reg_lname" placeholder = "Last Name" required>
+      <input type = "text" id = "regBirthDate" class = "reg_birthdate" placeholder = "Date of Birth" required>
+      <input type = "text" id = "regEmail" class = "reg_user" placeholder = "Email" required>
+      <input type = "password" id = "regPassword" class = "reg_pass" placeholder = "Password" required>
+      <input type = "password" id = "regConfirmPassword" class = "reg_confirm_pass" placeholder = "Confirm Password" required>
+      <button type = "button" class = "reg_button" onclick="validateRegisterForm()">Register</button>
+      <div class = "register-link"></div>
+      <p class = "login_reg">Already have an account? <a href = "login.html">Login</a></p>
+    </form>
+  </div>
+
+  <script src="../../static/scripts/script.js"></script>
+
+</body>
+</html>

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xml:lang="en">
 
 <head>
   <meta charset = "utf-8">
   <meta name = "viewport" content = "width=device-width">
   <title>Login</title>
-  <link href = "style.css" rel = "stylesheet" type = "text/css"/>
+  <link href = "../../static/styles/style.css" rel = "stylesheet" type = "text/css"/>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
       </div>
       <div class = "go_back">
         <a href = "index.html">
-          <img src = "go_back_white.png">
+          <img src = "../../images/go_back_white.png" alt = "Go back">
         </a>
       </div>
       <div class = "remember-forgot">
@@ -26,23 +26,12 @@
       </div>
       <button type = "button" class = "login_button" onclick = "validateLoginForm()">Login</button>
       <div class = "register-link"></div>
-      <p class = "reg_login">Don't have an account? <a href = "register.html">Register</a></p>
-      <script src = "script.js"></script>
+      <p class = "reg_login">Don't have an account? <a href = "../choose_role.html">Register</a></p>
+      <script src = "../../static/scripts/script.js"></script>
     </form>
   </div>
 
-  <script>
-    function validateLoginForm() {
-      var email = document.getElementById("loginEmail").value;
-      var password = document.getElementById("loginPassword").value;
-
-      if (email && password) {
-        window.location.href = 'complaints.html';
-      } else {
-        alert("Please fill in both email and password.");
-      }
-    }
-  </script>
+  <script src = "../../static/scripts/script.js"></script>
 </body>
 
 </html>
