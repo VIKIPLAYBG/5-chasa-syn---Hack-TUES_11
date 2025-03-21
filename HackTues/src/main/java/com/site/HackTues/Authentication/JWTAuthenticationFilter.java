@@ -16,12 +16,14 @@ import java.io.IOException;
 @Component
 public class JWTAuthenticationFilter extends OncePerRequestFilter {
 
-    private final com.site.HackTues.Authentication.JWTService jwtService;
+    private final JWTService jwtService;
     private final UserDetailsService userDetailsService;
+    private final TokenBlacklistService tokenBlacklistService;
 
-    public JWTAuthenticationFilter(com.site.HackTues.Authentication.JWTService jwtService, UserDetailsService userDetailsService) {
+    public JWTAuthenticationFilter(JWTService jwtService, UserDetailsService userDetailsService, TokenBlacklistService tokenBlacklistService) {
         this.jwtService = jwtService;
         this.userDetailsService = userDetailsService;
+        this.tokenBlacklistService = tokenBlacklistService;
     }
 
     @Override
@@ -35,6 +37,13 @@ public class JWTAuthenticationFilter extends OncePerRequestFilter {
         }
 
         String token = authHeader.substring(7);
+
+        if (tokenBlacklistService.isTokenBlacklisted(token)) {
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            response.getWriter().write("Token is invalid (logged out).");
+            return;
+        }
+
         String username = jwtService.extractUsername(token);
 
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {

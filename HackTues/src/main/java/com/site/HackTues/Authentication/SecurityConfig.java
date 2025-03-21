@@ -1,6 +1,7 @@
 package com.site.HackTues.Authentication;
 
 import com.site.HackTues.service.UserDetailsServiceImpl;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -20,7 +21,7 @@ public class SecurityConfig {
     private final UserDetailsServiceImpl userDetailsService;
     private final JWTAuthenticationFilter jwtAuthenticationFilter;
 
-    public SecurityConfig(UserDetailsServiceImpl userDetailsService, JWTAuthenticationFilter jwtAuthenticationFilter) {
+    public SecurityConfig(UserDetailsServiceImpl userDetailsService, JWTAuthenticationFilter jwtAuthenticationFilter, TokenBlacklistService tokenBlacklistService) {
         this.userDetailsService = userDetailsService;
         this.jwtAuthenticationFilter = jwtAuthenticationFilter;
     }
@@ -42,13 +43,28 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/", "/register", "/login").permitAll() // Allow public access
-                        .anyRequest().authenticated() // Secure other endpoints
+                        .requestMatchers("/", "/home", "/login", "/register").permitAll()
+                        .requestMatchers("/logout").authenticated()
+                        .anyRequest().authenticated()
                 )
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authenticationProvider(authenticationProvider())
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                .formLogin(form -> form
+                        .loginPage("/login")
+                        .defaultSuccessUrl("/", true)
+                        .permitAll()
+                )
+                .logout(logout -> logout
+                        .logoutUrl("/logout")
+                        .logoutSuccessHandler((request, response, authentication) -> {
+                            response.setStatus(HttpServletResponse.SC_OK);
+                            response.getWriter().write("Logged out successfully!");
+                        })
+                        .invalidateHttpSession(true)
+                        .deleteCookies("JSESSIONID")
+                );
 
         return http.build();
     }
