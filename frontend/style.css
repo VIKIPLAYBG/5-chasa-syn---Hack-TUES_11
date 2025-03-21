@@ -14,11 +14,7 @@ body {
   align-items:center;
   height:100vh;
   text-align:center;
-<<<<<<< Updated upstream
   background:linear-gradient(#B5EAD7, #77DD77);
-=======
-  background:linear-gradient(135deg, #c0ff5a, #ff9249);
->>>>>>> Stashed changes
 }
 
 .go_back {
@@ -230,17 +226,10 @@ body {
   position: absolute;
   align-items: center;
   justify-content: center;
-<<<<<<< Updated upstream
   background-color: #B5EAD7, #77DD77;
   padding: 10px 10px;
   top: 140px;
   left: 630px;
-=======
-  background-color: #ffd64f;
-  padding: 12px 16px;
-  top: 160px;
-  left: 620px;
->>>>>>> Stashed changes
   border-radius: 50px;
 }
 
@@ -248,17 +237,10 @@ body {
   position: absolute;
   align-items: center;
   justify-content: center;
-<<<<<<< Updated upstream
   background-color:#B5EAD7, #77DD77;
   padding: 8px 10px;
   top: 140px;
   left: 720px;
-=======
-  background-color: #fac0d2;
-  padding: 12px 16px;
-  top: 160px;
-  left: 715px;
->>>>>>> Stashed changes
   border-radius: 50px;
 }
 
@@ -270,15 +252,12 @@ body {
 
 .reg_button {
   position: absolute;
-<<<<<<< Updated upstream
   background-color: #B5EAD7, #77DD77;
   border: 1px solid transparent;
   color: black;
   padding: 25px 60px;
-=======
   background: #3498db;
   color: white;
->>>>>>> Stashed changes
   text-align: center;
   border: none;
   padding: 25px 60px;
@@ -309,13 +288,10 @@ body {
   transition: 0.3s ease, transform 0.2s ease;
 }
 .login_button:hover {
-<<<<<<< Updated upstream
   background-color: #B5EAD7, #77DD77;
   color: black;
-=======
   background: #2980b9;
   transform: scale(1.1);
->>>>>>> Stashed changes
 }
 
 .reg_login {
