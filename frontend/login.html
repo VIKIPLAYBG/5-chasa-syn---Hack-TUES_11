@@ -17,7 +17,7 @@
         <input type = "password" id = "loginPassword" class = "login_pass" placeholder = "Password" required>
       </div>
       <div class = "go_back">
-        <a href = "mainpage.html">
+        <a href = "index.html">
           <img src = "go_back_white.png">
         </a>
       </div>
@@ -53,7 +53,7 @@
       var password = document.getElementById("loginPassword").value;
 
       if (email && password) {
-        window.location.href = 'complaints.html';
+        window.location.href = 'choose_role.html';
       } else {
         alert("Please fill in both email and password.");
       }
