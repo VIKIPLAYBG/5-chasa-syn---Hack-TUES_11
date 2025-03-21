@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Arial", "sans-serif";
+            font-family: "Arial", sans-serif;
         }
         body {
             display: flex;
@@ -21,166 +21,46 @@
             background: linear-gradient(135deg, #a8edea, #fed6e3);
         }
         .container {
-            max-width: 700px;
+            max-width: 600px;
             background: #fff;
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
         }
         h1 {
             font-size: 26px;
             color: #2c3e50;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 16px;
-            color: #666;
             margin-bottom: 20px;
         }
         .buttons {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
         }
         button {
             background: #3498db;
             color: white;
             border: none;
-            padding: 12px 20px;
+            padding: 14px 24px;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
             transition: background 0.3s ease, transform 0.2s ease;
         }
         button:hover {
             background: #2980b9;
             transform: scale(1.1);
         }
-        .hidden {
-           display:none;
-        }
-        .comment-section, .add-comment {
-            margin-top: 30px;
-            text-align: left;
-        }
-        .comment {
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 10px;
-            color: #2c3e50;
-            font-size: 14px;
-            position: relative;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        .comment:hover {
-            transform: scale(1.02);
-        }
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #3498db;
-            border-radius: 6px;
-            font-size: 14px;
-            margin-bottom: 12px;
-            resize: none;
-        }
-        .info-box {
-            background: #ecf0f1;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            color: #2c3e50;
-            font-size: 14px;
-            text-align: left
-        }
-        .info-box strong{
-            color:#3498db;
-        }
-
     </style>
 </head>
 <body>
-    <div class="container" id="mainContainer">
+    <div class="container">
         <h1>Psychologist Support</h1>
-        <p>We connect professional psychologists with people who seek support.</p>
+        <p>Select your role to continue:</p>
         <div class="buttons">
-            <button onclick="showPsychologistView()">Register as a Psychologist</button>
-            <button onclick="showPatientView()">Request for Help</button>
+            <button onclick="location.href='tp_register.html'">Register as a Psychologist</button>
+            <button onclick="location.href='pat_register.html'">Register as a Patient</button>
         </div>
     </div>
-    <div class="container hidden" id="psychologistView">
-        <h1>Psychologist Dashboard</h1>
-        <p>Here you can see patient complaints and respond.</p>
-        <div class="comment-section" id="complaints">
-            <h2>What the patients tell:</h2>
-            <div class="comment">
-                <p>I have schizophrenia.</p>
-                <strong>Anonymous user</strong>
-                <textarea placeholder="Leave a comment..." class="response-box"></textarea>
-                <button onclick="addResponse(this)">Reply</button>
-            </div>
-            <div class="comment">
-                <p>I am mentally unstable.</p>
-                <strong>Anonymous user</strong>
-                <textarea placeholder="Leave a comment..." class="response-box"></textarea>
-                <button onclick="addResponse(this)">Reply</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Изглед за пациентите (добавяне на оплаквания) -->
-    <div class="container hidden" id="patientView">
-        <h1>Share your problem</h1>
-        <div class="add-comment">
-            <textarea id="userComplaint" rows="4" placeholder="Describe your problem..."></textarea>
-            <button onclick="submitComplaint()">Submit</button>
-        </div>
-    </div>
-
 </body>
-
-    <script>
-        function submitComplaint() {
-            let complaintText = document.getElementById("userComplaint").value;
-            if (complaintText.trim() === "") {
-                alert("Please enter your complaint.");
-                return;
-            }
-            let complaintsSection = document.getElementById("complaints");
-            let newComplaint = document.createElement("div");
-            newComplaint.classList.add("comment");
-            newComplaint.innerHTML = `<p>${complaintText}</p><strong>Anonymous user</strong>
-                <textarea placeholder="Leave a comment..." class="response-box"></textarea>
-                <button onclick="addResponse(this)">Reply</button>`;
-            complaintsSection.appendChild(newComplaint);
-            document.getElementById("userComplaint").value = "";
-            alert("Your complaint has been submitted.");
-        }
-        
-        function showPsychologistView() {
-            document.getElementById("mainContainer").classList.add("hidden");
-            document.getElementById("psychologistView").classList.remove("hidden");
-            document.getElementById("patientView").classList.add("hidden");
-        }
-
-        function showPatientView() {
-            document.getElementById("mainContainer").classList.add("hidden");
-            document.getElementById("psychologistView").classList.add("hidden");
-            document.getElementById("patientView").classList.remove("hidden");
-        }
-        function addResponse(button) {
-            let responseBox = button.previousElementSibling;
-            if (responseBox.value.trim() === "") {
-                alert("Please enter a response.");
-                return;
-            }
-            let response = document.createElement("p");
-            response.innerHTML = `<strong>Psychologist:</strong> ${responseBox.value}`;
-            button.parentElement.appendChild(response);
-            responseBox.value = "";
-        }
-    </script>
 </html>
