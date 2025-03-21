@@ -51,9 +51,46 @@
             background: #2980b9;
             transform: scale(1.1);
         }
+
+        .go_back {
+            position: absolute;
+            background-color: black;
+            border: 2px solid transparent;
+            color: white;
+            padding: 12px 16px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            top: 10px;
+            left: 20px;
+            border-radius: 100px;
+            transition: 0.3s ease, color 0.3s ease;
+        }
+
+        .go_back img {
+            transition: all 0.3s ease;
+        }
+
+        .go_back:hover {
+            background-color: white;
+            color: black;
+            border-color: black;
+        }
+
+        .go_back:hover img {
+            content: url('go_back_black.png');
+        }
     </style>
 </head>
 <body>
+    <div class = "go_back">
+        <a href = "index.html">
+          <img src = "go_back_white.png">
+        </a>
+      </div>
     <div class="container">
         <h1>Psychologist Support</h1>
         <p>Select your role to continue:</p>
