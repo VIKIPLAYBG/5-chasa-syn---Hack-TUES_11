@@ -14,7 +14,7 @@ body {
   align-items:center;
   height:100vh;
   text-align:center;
-  background:linear-gradient(#B5EAD7, #77DD77);
+  background:linear-gradient(#dff0ea, #5ff85f)
 }
 
 .go_back {
@@ -99,7 +99,7 @@ body {
   display: inline-block;
   font-size: 64px;
   top: 50px;
-  left: 562px;
+  left: 565px;
 }
 
 .reg_user {
@@ -142,7 +142,7 @@ body {
   display: inline-block;
   font-size: 64px;
   top: 50px;
-  left: 300px;
+  left: 350px;
 }
 
 .pat_reg_user {
@@ -153,7 +153,7 @@ body {
   display: inline-block;
   font-size: 16px;
   top: 150px;
-  left: 485px;
+  left: 475px;
 }
 
 .pat_reg_email {
@@ -164,7 +164,7 @@ body {
   display: inline-block;
   font-size: 16px;
   top: 225px;
-  left: 485px;
+  left: 475px;
 }
 
 .pat_reg_pass {
@@ -175,7 +175,7 @@ body {
   display: inline-block;
   font-size: 16px;
   top: 300px;
-  left: 485px;
+  left: 475px;
 }
 
 .pat_reg_confirm_pass {
@@ -186,7 +186,7 @@ body {
   display: inline-block;
   font-size: 16px;
   top: 375px;
-  left: 485px;
+  left: 475px;
 }
 
 .login_user {
@@ -196,7 +196,7 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 240px;
+  top: 210px;
   left: 475px;
 }
 
@@ -207,7 +207,7 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 315px;
+  top: 285px;
   left: 475px;
 }
 
@@ -215,9 +215,10 @@ body {
   position: absolute;
   align-items: center;
   justify-content: center;
-  padding: 12px 16px;
-  top: 160px;
-  left: 520px;
+  background-color: #fed6e3;
+  padding: 10px 10px;
+  top: 140px;
+  left: 540px;
   border-radius: 50px;
 }
 
@@ -226,9 +227,9 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #B5EAD7, #77DD77;
-  padding: 12px 16px;
-  top: 160px;
-  left: 620px;
+  padding: 10px 10px;
+  top: 140px;
+  left: 630px;
   border-radius: 50px;
 }
 
@@ -237,8 +238,8 @@ body {
   align-items: center;
   justify-content: center;
   background-color:#B5EAD7, #77DD77;
-  padding: 12px 16px;
-  top: 160px;
+  padding: 8px 10px;
+  top: 140px;
   left: 720px;
   border-radius: 50px;
 }
@@ -248,49 +249,47 @@ body {
   top: 360px;
   left: 490px;
 }
-
+  
 .reg_button {
   position: absolute;
   background-color: #B5EAD7, #77DD77;
   border: 1px solid transparent;
   color: black;
   padding: 25px 60px;
-  background: #3498db;
-  color: white;
   text-align: center;
-  border: none;
-  padding: 25px 60px;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
   top: 450px;
   left: 560px;
-  transition: 0.3s ease, transform 0.2s ease;
+  border-radius: 15px;
+  transition: 0.3s ease, color 0.3s ease;
 }
+
 .reg_button:hover {
-  background: #2980b9;
-  transform: scale(1.1);
+  background-color: #a8edea;
+  color: black;
 }
 
 .login_button {
   position: absolute;
-  background: #3498db;
-  color: white;
-  text-align: center;
-  border: none;
+  background-color: #f5cde2;
+  border: 2px solid transparent;
+  color: black;
   padding: 25px 70px;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
   top: 400px;
   left: 560px;
-  transition: 0.3s ease, transform 0.2s ease;
+  border-radius: 15px;
+  transition: 0.3s ease, color 0.3s ease;
 }
+
 .login_button:hover {
   background-color: #B5EAD7, #77DD77;
   color: black;
-  background: #2980b9;
-  transform: scale(1.1);
 }
 
 .reg_login {
@@ -325,3 +324,4 @@ body {
   top: 200px;
   left: 555px;
 }
+
