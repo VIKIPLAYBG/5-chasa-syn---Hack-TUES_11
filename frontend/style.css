@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -66,7 +66,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 150px;
+  top: 200px;
   left: 175px;
 }
 
@@ -77,7 +77,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 225px;
+  top: 275px;
   left: 175px;
 }
 
@@ -88,18 +88,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 300px;
-  left: 175px;
-}
-
-.reg_sex {
-  position: absolute;
-  padding: 15px 75px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  top: 375px;
+  top: 350px;
   left: 175px;
 }
 
@@ -120,7 +109,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 150px;
+  top: 200px;
   left: 775px;
 }
 
@@ -131,7 +120,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 225px;
+  top: 275px;
   left: 775px;
 }
 
@@ -142,7 +131,7 @@ body{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  top: 300px;
+  top: 350px;
   left: 775px;
 }
 
@@ -209,9 +198,9 @@ body{
   
 .reg_button {
   position: absolute;
-  background-color: black;
-  border: 2px solid transparent;
-  color: white;
+  background-color: #f5cde2;
+  border: 1px solid transparent;
+  color: black;
   padding: 25px 60px;
   text-align: center;
   text-decoration: none;
@@ -224,16 +213,15 @@ body{
 }
 
 .reg_button:hover {
-  background-color: white;
+  background-color: #a8edea;
   color: black;
-  border-color: black;
 }
 
 .login_button {
   position: absolute;
-  background-color: black;
+  background-color: #f5cde2;
   border: 2px solid transparent;
-  color: white;
+  color: black;
   padding: 25px 70px;
   text-align: center;
   text-decoration: none;
@@ -246,9 +234,8 @@ body{
 }
 
 .login_button:hover {
-  background-color: white;
+  background-color: #a8edea;
   color: black;
-  border-color: black;
 }
 
 .reg_login {
