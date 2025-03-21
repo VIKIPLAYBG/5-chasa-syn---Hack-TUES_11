@@ -7,14 +7,11 @@ import jakarta.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id", unique = true)
+    @Column(name = "user_id")
     private Long id;
 
-    @Column(name = "first_name")
-    private String fname;
-
-    @Column(name = "last_name")
-    private String lname;
+    @Column(name = "username")
+    private String username;
 
     @Column(unique = true, name = "email")
     private String email;
@@ -22,43 +19,33 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "dob")
-    private String dob;
+    public User() {
+    }
 
-    public User() {}
-
-    public User(String fname, String lname, String email, String password, String dob) {
-        this.fname = fname;
-        this.lname = lname;
+    public User(String username, String email, String password) {
+        this.username = username;
         this.email = email;
         this.password = password;
-        this.dob = dob;
     }
 
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
 
-    public String getFname() {
-        return fname;
-    }
-    public void setFname(String fname) {
-        this.fname = fname;
-    }
+    public String getUsername() { return username; }
 
-    public String getLname() {
-        return lname;
-    }
-    public void setLname(String lname) {
-        this.lname = lname;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
@@ -66,26 +53,18 @@ public class User {
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-    public void setDob(String dob) {
-        this.dob = dob;
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", fname='" + fname + '\'' +
-                ", lname='" + lname + '\'' +
+                ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", dob='" + dob + '\'' +
                 '}';
     }
 }
