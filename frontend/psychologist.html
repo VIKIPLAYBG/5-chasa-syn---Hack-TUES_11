@@ -90,15 +90,31 @@
         var textArea = complaintDiv.querySelector(".response-box");
         var responseText = textArea.value.trim();
 
-        if (responseText) {
-            var responseDiv = document.createElement("div");
-            responseDiv.classList.add("response");
-            responseDiv.innerHTML = "<strong>You:</strong> " + responseText;
+        var profanities = ["damn", "hell", "crap", "fuck", "shit", "you idiot", "you suck", "sucker", ""]; 
 
-            complaintDiv.querySelector(".responses").appendChild(responseDiv);
-            textArea.value = ""; 
+        function checkForProfanity(text) {
+            for (var i = 0; i < profanities.length; i++) {
+                var regex = new RegExp("\\b" + profanities[i] + "\\b", "gi");
+                if (regex.test(text)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        if (checkForProfanity(responseText)) {
+            alert("Warning: Your response contains inappropriate language. Please consider revising it.");
         } else {
-            alert("Please write a response before submitting.");
+            if (responseText) {
+                var responseDiv = document.createElement("div");
+                responseDiv.classList.add("response");
+                responseDiv.innerHTML = "<strong>You:</strong> " + responseText;
+
+                complaintDiv.querySelector(".responses").appendChild(responseDiv);
+                textArea.value = ""; 
+            } else {
+                alert("Please write a response before submitting.");
+            }
         }
     }
 </script>
