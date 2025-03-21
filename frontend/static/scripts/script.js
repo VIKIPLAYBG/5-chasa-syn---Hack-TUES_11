@@ -15,7 +15,7 @@ function validatePatRegForm() {
         return;
     }
 
-    window.location.href = "complaints.html";  // Redirect to the complaints page after successful validation
+    window.location.href = "../complaints.html";  // Redirect to the complaints page after successful validation
 }
 
 // Validate Login Form
@@ -24,7 +24,7 @@ function validateLoginForm() {
     let password = document.getElementById("loginPassword").value;
 
     if (email && password) {
-        window.location.href = 'complaints.html';  // Redirect to complaints page if login is successful
+        window.location.href = '../complaints.html';  // Redirect to complaints page if login is successful
     } else {
         alert("Please fill in both email and password.");
     }
@@ -53,7 +53,7 @@ function validateRegisterForm() {
     localStorage.setItem("psychologistName", firstName + " " + lastName);
 
     // Redirect to psychologist page after successful registration
-    window.location.href = 'psychologist.html';
+    window.location.href = '../psychologist.html';
 }
 
 // Add a Comment
@@ -76,7 +76,7 @@ function addComment() {
 function logout() {
     localStorage.clear();  // Clear localStorage to log the user out
     alert("You have been logged out!");
-    window.location.href = "index.html";  // Redirect to the login page
+    window.location.href = "../templates/authentication/index.html";  // Redirect to the login page
 }
 
 // Add a Response to a Complaint
