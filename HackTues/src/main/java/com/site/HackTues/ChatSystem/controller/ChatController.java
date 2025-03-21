@@ -7,12 +7,7 @@ import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.stereotype.Controller;
-<<<<<<< Updated upstream
-
-import com.site.HackTues.ChatSystem.model.ChatMessage;
-=======
 import org.springframework.beans.factory.annotation.Autowired;
->>>>>>> Stashed changes
 
 @Controller
 public class ChatController {
