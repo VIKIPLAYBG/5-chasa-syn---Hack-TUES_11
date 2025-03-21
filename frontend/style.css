@@ -215,10 +215,9 @@ body {
   position: absolute;
   align-items: center;
   justify-content: center;
-  background-color: #fac0d2;
   padding: 12px 16px;
   top: 160px;
-  left: 525px;
+  left: 520px;
   border-radius: 50px;
 }
 
@@ -227,9 +226,9 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #B5EAD7, #77DD77;
-  padding: 10px 10px;
-  top: 140px;
-  left: 630px;
+  padding: 12px 16px;
+  top: 160px;
+  left: 620px;
   border-radius: 50px;
 }
 
@@ -238,8 +237,8 @@ body {
   align-items: center;
   justify-content: center;
   background-color:#B5EAD7, #77DD77;
-  padding: 8px 10px;
-  top: 140px;
+  padding: 12px 16px;
+  top: 160px;
   left: 720px;
   border-radius: 50px;
 }
