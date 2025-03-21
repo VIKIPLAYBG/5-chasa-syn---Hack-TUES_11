@@ -58,7 +58,7 @@
             transform: scale(1.1);
         }
         .hidden {
-            display: none;
+           display:none;
         }
         .comment-section, .add-comment {
             margin-top: 30px;
@@ -111,9 +111,55 @@
             <button onclick="showPatientView()">Request for Help</button>
         </div>
     </div>
+    <div class="container hidden" id="psychologistView">
+        <h1>Psychologist Dashboard</h1>
+        <p>Here you can see patient complaints and respond.</p>
+        <div class="comment-section" id="complaints">
+            <h2>What the patients tell:</h2>
+            <div class="comment">
+                <p>I have schizophrenia.</p>
+                <strong>Anonymous user</strong>
+                <textarea placeholder="Leave a comment..." class="response-box"></textarea>
+                <button onclick="addResponse(this)">Reply</button>
+            </div>
+            <div class="comment">
+                <p>I am mentally unstable.</p>
+                <strong>Anonymous user</strong>
+                <textarea placeholder="Leave a comment..." class="response-box"></textarea>
+                <button onclick="addResponse(this)">Reply</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Изглед за пациентите (добавяне на оплаквания) -->
+    <div class="container hidden" id="patientView">
+        <h1>Share your problem</h1>
+        <div class="add-comment">
+            <textarea id="userComplaint" rows="4" placeholder="Describe your problem..."></textarea>
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+    </div>
+
 </body>
 
     <script>
+        function submitComplaint() {
+            let complaintText = document.getElementById("userComplaint").value;
+            if (complaintText.trim() === "") {
+                alert("Please enter your complaint.");
+                return;
+            }
+            let complaintsSection = document.getElementById("complaints");
+            let newComplaint = document.createElement("div");
+            newComplaint.classList.add("comment");
+            newComplaint.innerHTML = `<p>${complaintText}</p><strong>Anonymous user</strong>
+                <textarea placeholder="Leave a comment..." class="response-box"></textarea>
+                <button onclick="addResponse(this)">Reply</button>`;
+            complaintsSection.appendChild(newComplaint);
+            document.getElementById("userComplaint").value = "";
+            alert("Your complaint has been submitted.");
+        }
+        
         function showPsychologistView() {
             document.getElementById("mainContainer").classList.add("hidden");
             document.getElementById("psychologistView").classList.remove("hidden");
@@ -124,6 +170,17 @@
             document.getElementById("mainContainer").classList.add("hidden");
             document.getElementById("psychologistView").classList.add("hidden");
             document.getElementById("patientView").classList.remove("hidden");
+        }
+        function addResponse(button) {
+            let responseBox = button.previousElementSibling;
+            if (responseBox.value.trim() === "") {
+                alert("Please enter a response.");
+                return;
+            }
+            let response = document.createElement("p");
+            response.innerHTML = `<strong>Psychologist:</strong> ${responseBox.value}`;
+            button.parentElement.appendChild(response);
+            responseBox.value = "";
         }
     </script>
 </html>
