@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychologist Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Arial", "sans-serif";
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            position: relative;
+        }
+        .top-right-buttons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+        }
+        .container {
+            max-width: 700px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+            margin: 10px 0;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 16px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background: #2980b9;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-right-buttons">
+        <button onclick="window.location.href='login.html'">Login</button>
+        <button onclick="window.location.href='register.html'">Register</button>
+    </div>
+    
+    <div class="container">
+        <h1>Psychologist Support</h1>
+        <p>We connect professional psychologists with people who seek support.</p>
+        <p>✔ Psychologists register and receive requests from individuals seeking help.</p>
+        <p>✔ Patients submit anonymous information about their mental health concerns.</p>
+        <p>✔ The system automatically connects patients with available psychologists.</p>
+    </div>
+</body>
+</html>
