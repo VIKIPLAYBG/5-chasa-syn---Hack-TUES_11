@@ -5,7 +5,7 @@
   <meta charset = "utf-8">
   <meta name = "viewport" content = "width=device-width">
   <title>Login</title>
-  <link href = "style.css" rel = "stylesheet" type = "text/css" />
+  <link href = "style.css" rel = "stylesheet" type = "text/css"/>
 </head>
 
 <body>
@@ -21,20 +21,24 @@
           <img src = "go_back_white.png">
         </a>
       </div>
+      <div class = "remember-forgot">
+        <label><input type = "checkbox"> Remember me.</label>
+        <a href = "forgot_pass.html">Forgot your password?</a>
+      </div>
       <button type = "button" class = "login_button" onclick = "validateLoginForm()">Login</button>
       <div class = "register-link"></div>
-      <p class = "reg_login">Don't have an account? <a href = "choose_role.html">Register</a></p>
+      <p class = "reg_login">Don't have an account? <a href = "register.html">Register</a></p>
       <script src = "script.js"></script>
     </form>
   </div>
 
   <script>
-    function validateLoginForm() {
+    function validateLogiForm() {
       var email = document.getElementById("loginEmail").value;
       var password = document.getElementById("loginPassword").value;
 
       if (email && password) {
-        window.location.href = "complaints.html";
+        window.location.href = 'choose_role.html';
       } else {
         alert("Please fill in both email and password.");
       }
